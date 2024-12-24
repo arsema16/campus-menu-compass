@@ -4,7 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: #fff;
+  box-shadow: 0 2px 5px -2px #0000001a;
+  transition: all 0.6s ease;
+}
 body {
   font-family: "Arial", sans-serif;
   background-color: #f7f7f7;
@@ -13,7 +26,24 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
+.navlist {
+  display: flex;
+}
+.navlist a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #0e060600;
+  margin: 0 30px;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.6s ease;
+  text-decoration: none;
+  list-style: none;
+}
+.navlist a:hover {
+  color: #4b9e22;
+  border-bottom: 2px solid #4b9e22;
+}
 .contact-container {
   background-color: #fff;
   padding: 40px;
