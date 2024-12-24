@@ -7,6 +7,8 @@
 header {
   position: fixed;
   width: 100%;
+  color: #0e060600;
+
   top: 0;
   right: 0;
   z-index: 1000;
@@ -14,7 +16,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 10%;
-  background: #fff;
+  background: #0e060600;
   box-shadow: 0 2px 5px -2px #0000001a;
   transition: all 0.6s ease;
 }
@@ -29,7 +31,7 @@ body {
 .navlist {
   display: flex;
 }
-.navlist a {
+.navlist li {
   display: inline-block;
   font-size: 1.1rem;
   color: #0e060600;
@@ -37,6 +39,8 @@ body {
   padding: 2px 0;
   border-bottom: 2px solid transparent;
   transition: all 0.6s ease;
+}
+a {
   text-decoration: none;
   list-style: none;
 }
