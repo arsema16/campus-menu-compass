@@ -404,7 +404,7 @@ section {
   color: var(--text-color);
   margin-right: 10px;
   font-size: 23px;
-  transition: all 0.7s ease;
+  transition: all 0.9s ease;
 }
 .icons i:hover {
   color: var(--main-color);
@@ -494,7 +494,6 @@ section {
     height: 350px;
     right: -100%;
     display: flex;
-    flex-direction: column;
     background: var(--bg-color);
     border-radius: 0px 0px 20px 20px;
     padding: 10px 0;
