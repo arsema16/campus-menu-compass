@@ -12,6 +12,18 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+// Function to validate email with specific Gmail and ".com" requirements
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@gmail\.com$/;
+    return emailRegex.test(email);
+}
+
+// Function to validate strong password
+function isStrongPassword(password) {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
+}
+
 // Registration Process
 document.querySelector('.sign-up form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -22,6 +34,16 @@ document.querySelector('.sign-up form').addEventListener('submit', function (eve
 
     if (!name || !email || !password) {
         alert("All fields are required!");
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid Gmail address ending with @gmail.com!");
+        return;
+    }
+
+    if (!isStrongPassword(password)) {
+        alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character!");
         return;
     }
 
@@ -49,6 +71,11 @@ document.querySelector('.sign-in form').addEventListener('submit', function (eve
 
     if (!email || !password) {
         alert("Please fill in all fields!");
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid Gmail address ending with @gmail.com!");
         return;
     }
 
