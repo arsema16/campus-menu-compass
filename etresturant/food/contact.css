@@ -307,6 +307,7 @@ textarea {
 @media (max-width: 1070px) {
   #menu-icon {
     display: block;
+    color: var(--bg-color);
   }
   .nav-links {
     position: absolute;
